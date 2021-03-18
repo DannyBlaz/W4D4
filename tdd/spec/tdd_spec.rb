@@ -24,9 +24,6 @@ describe Array do
         it "should convert between row oriented and column oriented orientation" do
             expect(array.my_transpose).to eq([[0, 3, 6], [1, 4, 7], [2, 5, 8]])
         end
-        it "should not mutate the array" do 
-            
-        end
     end
 
 
