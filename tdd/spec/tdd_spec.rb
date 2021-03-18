@@ -9,16 +9,14 @@ describe Array do
         end
     end
 
-    describe "#two_sum" do 
+    describe "#my_two_sum" do 
         # array = [-1, 0, 2, -2, 1]
         subject(:array) {[-1, 0, 2, -2, 1]}
-        it "return numbers that sum to zero" do 
-            
+        it "return the indices of elements that sum to zero" do 
+            expect(:array.my_two_sum).to eq([[0, 4], [2, 3]])
         end
         it "return pairs" do
-        end
-        it "should return sorted pairs" do 
-
+            expect(:array.my_two_sum.all? {|ele| ele.length == 2}).to eq(true)
         end
     end
 
