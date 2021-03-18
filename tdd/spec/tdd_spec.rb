@@ -37,11 +37,28 @@ end
 
 describe TowerOfHanoi do
     subject(:)
-    describe "#valid_move?"
+    describe "#valid_move?" do
+        it "should take two stacks as arg" do 
+        end
+        it "should raise an error if origin stack is empty" do 
+            expect{}.to raise_error("STACK IS EMPTY")
+        end
         it "larger discs cannot be stacked on smaller discs" do
             expect{}.to raise_error("INVALID MOVE")
         end
-
+    end
+    describe"#move" do
+        it "should get input from player" do
+        end
+        it "should call valid move" do 
+        end
+        it "should move top plate to selected stack" do 
+        end
+    end
+    describe "#won?"
+        context "it should return true"
+        it "should "
+    end
     # platform (arrays)
     # discs (nums)
     # move method 
