@@ -34,3 +34,18 @@ describe Array do
     end
 
 end
+
+describe TowerOfHanoi do
+    subject(:)
+    describe "#valid_move?"
+        it "larger discs cannot be stacked on smaller discs" do
+            expect{}.to raise_error("INVALID MOVE")
+        end
+
+    # platform (arrays)
+    # discs (nums)
+    # move method 
+        # only valid if smaller num behind smaller num (rev sorted)
+    # won? method
+        # if target arr is full and in rev sorted order
+end
