@@ -32,8 +32,17 @@ class Array
 
         transposed
     end
+
+    def stock_picker
+        s_stock = self.first
+        l_stock = 0
+
+        self.each_with_index do |ele, i|
+            l_stock = i if ele > l_stock
+            s_stock = i if ele < s_stock
+        end
+
+        [s_stock, l_stock]
+    end
 end
 
-# 00 01 02
-# 10 11 12
-# 20 21 22

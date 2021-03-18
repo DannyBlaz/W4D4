@@ -26,5 +26,11 @@ describe Array do
         end
     end
 
+    describe "#stock_picker" do
+        subject(:array) {[20, 18, 22, 20, 34, 23, 26]}
+        it "should return the two best days to buy and sell" do
+            expect(array.stock_picker).to eq([1, 4])
+        end
+    end
 
 end
