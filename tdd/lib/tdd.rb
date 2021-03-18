@@ -22,18 +22,15 @@ class Array
     end
 
     def my_transpose
-        num = self.length
-        new_arr = []
+        transposed = Array.new(self.length) {Array.new(self.length)}
 
-        self.each_with_index do |ele_1, i| #0
-            ele = [] 
-            ele_1.each_with_index do |ele_2, j|
-                ele << ele_2 if j == i
+        self.first.each_with_index do |ele, ele_idx|
+            self.each_with_index do |arr, arr_idx|
+                transposed[ele_idx][arr_idx] = self[arr_idx][ele_idx]
             end
-            new_arr << ele
         end
 
-        new_arr
+        transposed
     end
 end
 
