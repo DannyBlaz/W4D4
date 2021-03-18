@@ -34,15 +34,20 @@ class Array
     end
 
     def stock_picker
-        s_stock = self.first
-        l_stock = 0
+        most_profitable = nil
+        current = 0
 
-        self.each_with_index do |ele, i|
-            l_stock = i if ele > l_stock
-            s_stock = i if ele < s_stock
+        self.each_with_index do |price1, buy_day|
+            self.each_with_index do |price2, sell_day|
+                gain = price2 - price1
+                if buy_day < sell_day && gain > current
+                    current = gain
+                    most_profitable = [buy_day, sell_day]
+                end
+            end
         end
 
-        [s_stock, l_stock]
+        most_profitable
     end
 end
 
